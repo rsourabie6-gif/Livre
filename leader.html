@@ -29,6 +29,9 @@
             color: white;
             padding: 1rem 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         nav {
@@ -98,12 +101,32 @@
         .article h2 {
             color: #667eea;
             margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .article h3 {
+            color: #764ba2;
+            margin: 1.5rem 0 1rem 0;
+            font-size: 1.3rem;
         }
 
         .article-meta {
             color: #666;
             font-size: 0.9rem;
             margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .article p {
+            margin-bottom: 1rem;
+        }
+
+        .article ul, .article ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        .article li {
+            margin-bottom: 0.5rem;
         }
 
         .btn-back {
@@ -121,6 +144,14 @@
             background: #764ba2;
         }
 
+        .highlight {
+            background: #f0f4ff;
+            padding: 1.5rem;
+            border-left: 4px solid #667eea;
+            margin: 1.5rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+
         footer {
             background: #333;
             color: white;
@@ -136,11 +167,11 @@
             <nav>
                 <a href="index.html" class="logo">Évolution Perso</a>
                 <ul class="nav-links">
-                    <li><a href="index.html" target="_blank">Accueil</a></li>
-                    <li><a href="entreprenariat.html" target="_blank">Entreprenariat</a></li>
-                    <li><a href="education.html" target="_blank">Éducation Financière</a></li>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="entreprenariat.html">Entreprenariat</a></li>
+                    <li><a href="education.html">Éducation Financière</a></li>
                     <li><a href="leader.html">Leadership</a></li>
-                    <li><a href="index.html#contact" target="_blank">Contact</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -154,37 +185,160 @@
     </section>
 
     <main class="container">
-        <a href="index.html" target="_blank" class="btn-back">← Retour à l'accueil</a>
+        <a href="index.html" class="btn-back">← Retour à l'accueil</a>
 
         <div class="content">
             <article class="article">
-                <h2>Les 7 piliers du leadership authentique</h2>
-                <div class="article-meta">Publié le 18 janvier 2024 | 8 min de lecture</div>
-                <p>Découvrez les fondements d'un leadership véritable : intégrité, vision, empathie, courage, humilité, résilience et communication. Comment cultiver ces qualités pour devenir un leader inspirant.</p>
+                <h2>Leçon 1 : Les 7 piliers du leadership authentique</h2>
+                <div class="article-meta">Publié le 18 janvier 2024 | 15 min de lecture</div>
+                
+                <h3>Pilier 1 : L'intégrité - La base de toute relation de confiance</h3>
+                <p>L'intégrité est la qualité fondamentale d'un leader. Elle se manifeste par la cohérence entre vos paroles et vos actes. Un leader intègre tient ses promesses, admet ses erreurs et agit selon des principes éthiques, même quand personne ne regarde.</p>
+                <p><strong>Comment développer son intégrité ?</strong></p>
+                <ul>
+                    <li>Tenez systématiquement vos engagements, même les plus petits</li>
+                    <li>Soyez transparent sur vos décisions et leurs motivations</li>
+                    <li>Admettez vos erreurs et apprenez-en</li>
+                    <li>Refusez les compromis contraires à vos valeurs</li>
+                </ul>
+
+                <h3>Pilier 2 : La vision - Donner du sens à l'action</h3>
+                <p>Un leader doit savoir où il va et être capable de partager cette direction avec son équipe. La vision répond à la question "Pourquoi faisons-nous ce que nous faisons ?".</p>
+                <div class="highlight">
+                    <p><strong>Exercice :</strong> Écrivez votre vision en une phrase qui soit à la fois inspirante et claire. Par exemple : "Devenir la référence du conseil en développement personnel en Afrique francophone d'ici 2028".</p>
+                </div>
+
+                <h3>Pilier 3 : L'empathie - Comprendre pour mieux guider</h3>
+                <p>L'empathie n'est pas de la faiblesse. C'est la capacité à comprendre les émotions et les perspectives des autres, ce qui permet de :</p>
+                <ul>
+                    <li>Mieux communiquer avec chaque membre de l'équipe</li>
+                    <li>Anticiper les réactions et les besoins</li>
+                    <li>Créer un environnement de travail où chacun se sent écouté</li>
+                    <li>Résoudre les conflits de façon constructive</li>
+                </ul>
+
+                <h3>Pilier 4 : Le courage - Oser prendre des décisions difficiles</h3>
+                <p>Le leadership implique de prendre des décisions impopulaires ou risquées. Le courage, c'est :</p>
+                <ul>
+                    <li>Dire les choses difficiles quand c'est nécessaire</li>
+                    <li>Prendre des risques calculés</li>
+                    <li>Défendre son équipe face aux pressions extérieures</li>
+                    <li>Sortir de sa zone de confort pour grandir</li>
+                </ul>
+
+                <h3>Pilier 5 : L'humilité - Grandir sans écraser les autres</h3>
+                <p>L'humilité, c'est reconnaître qu'on n'a pas toutes les réponses et qu'on peut apprendre de chacun. Un leader humble :</p>
+                <ul>
+                    <li>Valorise les contributions de son équipe</li>
+                    <li>Reconnaît ses limites et s'entoure de personnes plus compétentes</li>
+                    <li>Est ouvert aux feedbacks et aux critiques</li>
+                    <li>Célèbre les succès collectifs plutôt que ses réussites personnelles</li>
+                </ul>
+
+                <h3>Pilier 6 : La résilience - Rebondir face aux difficultés</h3>
+                <p>Le chemin du leadership est semé d'obstacles. La résilience permet de :</p>
+                <ul>
+                    <li>Garder son calme dans les moments difficiles</li>
+                    <li>Tirer des leçons des échecs</li>
+                    <li>Maintenir le cap malgré les tempêtes</li>
+                    <li>Inspirer son équipe par son exemple de persévérance</li>
+                </ul>
+
+                <h3>Pilier 7 : La communication - Transmettre efficacement</h3>
+                <p>Un leader peut avoir la meilleure vision du monde, si elle n'est pas communiquée efficacement, elle reste lettre morte. La communication du leader doit être :</p>
+                <ul>
+                    <li><strong>Claire :</strong> pas d'ambiguïté dans les messages</li>
+                    <li><strong>Adaptée :</strong> au public, au contexte, au canal</li>
+                    <li><strong>Régulière :</strong> pour maintenir l'alignement de l'équipe</li>
+                    <li><strong>Authentique :</strong> qui vient du cœur, pas de "langue de bois"</li>
+                </ul>
             </article>
 
             <article class="article">
-                <h2>Comment développer son intelligence émotionnelle</h2>
-                <div class="article-meta">Publié le 12 janvier 2024 | 6 min de lecture</div>
-                <p>L'intelligence émotionnelle est la clé d'un leadership efficace. Apprenez à reconnaître, comprendre et gérer vos émotions et celles des autres pour créer un environnement de travail positif.</p>
+                <h2>Leçon 2 : Comment développer son intelligence émotionnelle</h2>
+                <div class="article-meta">Publié le 12 janvier 2024 | 12 min de lecture</div>
+                
+                <h3>Qu'est-ce que l'intelligence émotionnelle ?</h3>
+                <p>Popularisée par Daniel Goleman, l'intelligence émotionnelle est la capacité à identifier, comprendre et gérer ses propres émotions et celles des autres. Elle est souvent plus prédictive de la réussite professionnelle que le QI.</p>
+
+                <h3>Les 4 composantes de l'intelligence émotionnelle</h3>
+
+                <h4>1. La conscience de soi</h4>
+                <p>C'est la capacité à reconnaître ses émotions et leur impact sur vos pensées et actions.</p>
+                <p><strong>Comment la développer :</strong></p>
+                <ul>
+                    <li>Prenez 5 minutes chaque jour pour identifier ce que vous ressentez et pourquoi</li>
+                    <li>Tenez un journal émotionnel</li>
+                    <li>Observez vos réactions dans différentes situations</li>
+                    <li>Demandez des feedbacks sur votre comportement</li>
+                </ul>
+
+                <h4>2. La maîtrise de soi</h4>
+                <p>C'est la capacité à gérer ses émotions, surtout dans les moments difficiles.</p>
+                <p><strong>Techniques pratiques :</strong></p>
+                <ul>
+                    <li>La respiration profonde quand vous sentez la colère monter</li>
+                    <li>Compter jusqu'à 10 avant de répondre</li>
+                    <li>Prendre du recul ("Est-ce que cela aura encore de l'importance dans 1 an ?")</li>
+                    <li>Transformer les pensées négatives en pensées constructives</li>
+                </ul>
+
+                <div class="highlight">
+                    <p><strong>Exercice :</strong> La prochaine fois que vous vivez une émotion forte (colère, frustration), prenez une pause de 5 minutes avant de réagir. Notez ce que vous ressentez et pourquoi, puis décidez consciemment de votre réponse.</p>
+                </div>
+
+                <h4>3. L'empathie sociale</h4>
+                <p>C'est la capacité à percevoir et comprendre les émotions des autres.</p>
+                <p><strong>Comment l'améliorer :</strong></p>
+                <ul>
+                    <li>Pratiquez l'écoute active (sans préparer votre réponse pendant que l'autre parle)</li>
+                    <li>Observez le langage non-verbal (posture, ton, expressions)</li>
+                    <li>Posez des questions ouvertes sur ce que l'autre ressent</li>
+                    <li>Validez les émotions des autres ("Je comprends que tu sois frustré")</li>
+                </ul>
+
+                <h4>4. La gestion des relations</h4>
+                <p>C'est la capacité à influencer, inspirer et développer les autres.</p>
+                <ul>
+                    <li>Apprenez à donner des feedbacks constructifs</li>
+                    <li>Gérez les conflits de façon positive</li>
+                    <li>Créez un climat de confiance</li>
+                    <li>Développez votre réseau de relations authentiques</li>
+                </ul>
             </article>
 
             <article class="article">
-                <h2>Leadership situationnel : s'adapter à chaque contexte</h2>
-                <div class="article-meta">Publié le 7 janvier 2024 | 7 min de lecture</div>
-                <p>Le leadership n'est pas figé. Découvrez comment adapter votre style de management selon les situations, les équipes et les objectifs pour maximiser l'efficacité de votre organisation.</p>
-            </article>
+                <h2>Leçon 3 : Le leadership situationnel - S'adapter à chaque contexte</h2>
+                <div class="article-meta">Publié le 7 janvier 2024 | 10 min de lecture</div>
+                
+                <h3>Le principe du leadership situationnel</h3>
+                <p>Développé par Paul Hersey et Ken Blanchard, le leadership situationnel part du principe qu'il n'y a pas un seul style de leadership efficace. Le bon style dépend de la situation et surtout du niveau de maturité de vos collaborateurs.</p>
 
-            <article class="article">
-                <h2>Former et motiver ses équipes</h2>
-                <div class="article-meta">Publié le 2 janvier 2024 | 6 min de lecture</div>
-                <p>Les techniques pour créer une équipe performante et engagée : feedback constructif, reconnaissance, délégation efficace et développement des talents. Devenez le leader que vos collaborateurs méritent.</p>
-            </article>
+                <h3>Les 4 styles de leadership</h3>
 
-            <article class="article">
-                <h2>La prise de décision en situation complexe</h2>
-                <div class="article-meta">Publié le 28 décembre 2023 | 5 min de lecture</div>
-                <p>Comment prendre les bonnes décisions quand l'incertitude règne ? Méthodes, outils et état d'esprit pour naviguer dans la complexité et assumer ses choix avec confiance.</p>
+                <h4>Style 1 : Directif (pour les collaborateurs débutants ou en difficulté)</h4>
+                <p><strong>Caractéristiques :</strong> Donne des instructions claires, supervise de près, prend les décisions.</p>
+                <p><strong>Quand l'utiliser :</strong> Avec un nouveau collaborateur qui manque d'expérience, en situation de crise, quand la tâche est critique.</p>
+                <p><strong>Exemple :</strong> "Voici comment faire ce rapport. Je veux que tu suives ces étapes exactement et que tu me montres ton travail avant de l'envoyer."</p>
+
+                <h4>Style 2 : Persuasif (pour les collaborateurs motivés mais manquant de compétences)</h4>
+                <p><strong>Caractéristiques :</strong> Explique les décisions, encourage, maintient une supervision tout en développant l'autonomie.</p>
+                <p><strong>Quand l'utiliser :</strong> Avec un collaborateur enthousiaste mais qui a encore besoin de guidance technique.</p>
+                <p><strong>Exemple :</strong> "Je vais te montrer comment faire, mais j'aimerais aussi avoir ton avis sur la meilleure approche."</p>
+
+                <h4>Style 3 : Participatif (pour les collaborateurs compétents mais manquant de confiance)</h4>
+                <p><strong>Caractéristiques :</strong> Facilite la prise de décision, soutient, encourage la participation.</p>
+                <p><strong>Quand l'utiliser :</strong> Avec un collaborateur qui a les compétences mais a besoin de soutien pour prendre confiance.</p>
+                <p><strong>Exemple :</strong> "Tu as toutes les compétences pour gérer ce projet. Comment penses-tu qu'on devrait procéder ? Je suis là si tu as besoin de soutien."</p>
+
+                <h4>Style 4 : Délégatif (pour les collaborateurs experts et autonomes)</h4>
+                <p><strong>Caractéristiques :</strong> Délègue complètement, donne de l'autonomie, intervient peu.</p>
+                <p><strong>Quand l'utiliser :</strong> Avec un collaborateur expérimenté, fiable et autonome.</p>
+                <p><strong>Exemple :</strong> "Je te fais confiance pour gérer ce projet comme tu le juges bon. Tiens-moi juste informé des points clés."</p>
+
+                <div class="highlight">
+                    <p><strong>À retenir :</strong> Le meilleur leader est celui qui sait adapter son style à chaque personne et à chaque situation. Ne traitez pas tout le monde de la même façon.</p>
+                </div>
             </article>
         </div>
     </main>
