@@ -29,6 +29,9 @@
             color: white;
             padding: 1rem 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         nav {
@@ -98,12 +101,32 @@
         .article h2 {
             color: #667eea;
             margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .article h3 {
+            color: #764ba2;
+            margin: 1.5rem 0 1rem 0;
+            font-size: 1.3rem;
         }
 
         .article-meta {
             color: #666;
             font-size: 0.9rem;
             margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .article p {
+            margin-bottom: 1rem;
+        }
+
+        .article ul, .article ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        .article li {
+            margin-bottom: 0.5rem;
         }
 
         .btn-back {
@@ -121,6 +144,14 @@
             background: #764ba2;
         }
 
+        .highlight {
+            background: #f0f4ff;
+            padding: 1.5rem;
+            border-left: 4px solid #667eea;
+            margin: 1.5rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+
         footer {
             background: #333;
             color: white;
@@ -136,10 +167,11 @@
             <nav>
                 <a href="index.html" class="logo">Évolution Perso</a>
                 <ul class="nav-links">
-                    <li><a href="index.html" target="_blank">Accueil</a></li>
+                    <li><a href="index.html">Accueil</a></li>
                     <li><a href="entreprenariat.html">Entreprenariat</a></li>
-                    <li><a href="education.html" target="_blank">Éducation Financière</a></li>
-                    <li><a href="index.html#contact" target="_blank">Contact</a></li>
+                    <li><a href="education.html">Éducation Financière</a></li>
+                    <li><a href="leader.html">Leadership</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -153,25 +185,134 @@
     </section>
 
     <main class="container">
-        <a href="index.html" target="_blank" class="btn-back">← Retour à l'accueil</a>
+        <a href="index.html" class="btn-back">← Retour à l'accueil</a>
 
         <div class="content">
             <article class="article">
-                <h2>Les 5 qualités essentielles d'un entrepreneur à succès</h2>
-                <div class="article-meta">Publié le 15 janvier 2024 | 5 min de lecture</div>
-                <p>Découvrez les qualités qui distinguent les entrepreneurs qui réussissent : la résilience, la vision, l'adaptabilité, la passion et la discipline. Apprenez à développer ces compétences clés pour votre parcours entrepreneurial.</p>
+                <h2>Leçon 1 : Les 5 qualités essentielles d'un entrepreneur à succès</h2>
+                <div class="article-meta">Publié le 15 janvier 2024 | 15 min de lecture</div>
+                
+                <h3>1. La résilience : le pilier fondamental</h3>
+                <p>La résilience est la capacité à rebondir après un échec. Dans le monde de l'entrepreneuriat, les obstacles sont nombreux et fréquents. Les entrepreneurs qui réussissent sont ceux qui considèrent l'échec comme une opportunité d'apprentissage plutôt qu'une fin en soi.</p>
+                <p><strong>Comment développer sa résilience ?</strong></p>
+                <ul>
+                    <li>Adoptez une mentalité de croissance : chaque difficulté est une leçon</li>
+                    <li>Entourez-vous de personnes positives qui vous soutiennent</li>
+                    <li>Prenez du recul face aux situations difficiles</li>
+                    <li>Célébrez les petites victoires pour maintenir votre motivation</li>
+                </ul>
+
+                <h3>2. La vision : voir au-delà du présent</h3>
+                <p>Un entrepreneur doit avoir une vision claire de où il veut aller. Cette vision guide toutes ses décisions et inspire son équipe.</p>
+                <div class="highlight">
+                    <p><strong>Exercice pratique :</strong> Prenez 30 minutes pour écrire où vous voyez votre entreprise dans 5 ans. Soyez précis : chiffre d'affaires, nombre d'employés, impact sur vos clients, etc.</p>
+                </div>
+
+                <h3>3. L'adaptabilité : savoir pivoter</h3>
+                <p>Le marché change constamment. Les entrepreneurs qui réussissent savent s'adapter et modifier leur stratégie quand nécessaire. L'histoire de Slack qui a commencé comme un jeu vidéo avant de devenir l'outil de communication qu'on connaît est un parfait exemple.</p>
+
+                <h3>4. La passion : le moteur de la persévérance</h3>
+                <p>Sans passion, il est difficile de traverser les moments difficiles. Votre projet doit vous animer profondément pour que vous soyez prêt à y consacrer le temps et l'énergie nécessaires.</p>
+
+                <h3>5. La discipline : la clé de l'exécution</h3>
+                <p>Les idées ne valent rien sans exécution. La discipline vous permet de transformer vos visions en réalité, jour après jour.</p>
+                <ul>
+                    <li>Établissez des routines quotidiennes</li>
+                    <li>Fixez-vous des objectifs SMART (Spécifiques, Mesurables, Atteignables, Réalistes, Temporellement définis)</li>
+                    <li>Tenez un journal de bord de vos progrès</li>
+                </ul>
             </article>
 
             <article class="article">
-                <h2>Comment valider votre idée d'entreprise avant de vous lancer</h2>
-                <div class="article-meta">Publié le 10 janvier 2024 | 7 min de lecture</div>
-                <p>Évitez les erreurs courantes en apprenant à tester votre idée sur le marché. Méthodes pratiques, études de marché et retours d'expérience pour valider votre concept avant d'investir.</p>
+                <h2>Leçon 2 : Comment valider votre idée d'entreprise avant de vous lancer</h2>
+                <div class="article-meta">Publié le 10 janvier 2024 | 12 min de lecture</div>
+                
+                <h3>Pourquoi la validation est cruciale ?</h3>
+                <p>80% des nouvelles entreprises échouent dans les 18 premiers mois, souvent parce qu'elles créent un produit dont personne n'a besoin. La validation de marché vous évite de perdre du temps et de l'argent sur une idée non viable.</p>
+
+                <h3>Étape 1 : Définissez votre proposition de valeur</h3>
+                <p>Avant de valider, vous devez savoir ce que vous validez. Utilisez le "Value Proposition Canvas" pour clarifier :</p>
+                <ul>
+                    <li>Quel problème résolvez-vous ?</li>
+                    <li>Pour qui ?</li>
+                    <li>Quelle est votre solution unique ?</li>
+                    <li>Quels sont les bénéfices pour vos clients ?</li>
+                </ul>
+
+                <h3>Étape 2 : Identifiez vos clients potentiels</h3>
+                <p>Créez un profil détaillé de votre client idéal :</p>
+                <ul>
+                    <li>Âge, profession, localisation</li>
+                    <li>Habitudes de consommation</li>
+                    <li>Points de douleur actuels</li>
+                    <li>Où trouvent-ils leurs informations ?</li>
+                </ul>
+
+                <h3>Étape 3 : Menez des entretiens clients</h3>
+                <p>Rien ne remplace la conversation directe avec vos prospects. Voici comment procéder :</p>
+                <ol>
+                    <li>Identifiez 20 à 30 personnes correspondant à votre profil cible</li>
+                    <li>Préparez des questions ouvertes (pas de questions fermées)</li>
+                    <li>Ne vendez pas, écoutez leurs problèmes</li>
+                    <li>Cherchez à comprendre leurs comportements actuels</li>
+                    <li>Demandez s'ils seraient prêts à payer pour votre solution</li>
+                </ol>
+
+                <div class="highlight">
+                    <p><strong>Exemple de questions :</strong> "Comment résolvez-vous ce problème actuellement ?", "Qu'est-ce qui vous frustre dans les solutions existantes ?", "Si vous aviez une baguette magique, que changeriez-vous ?"</p>
+                </div>
+
+                <h3>Étape 4 : Créez un MVP (Minimum Viable Product)</h3>
+                <p>Le MVP est la version la plus simple de votre produit qui apporte de la valeur. Il peut s'agir :</p>
+                <ul>
+                    <li>D'une landing page avec un formulaire d'inscription</li>
+                    <li>D'une maquette interactive</li>
+                    <li>D'un service rendu manuellement (le "Wizard of Oz")</li>
+                    <li>D'une vidéo de démonstration</li>
+                </ul>
+
+                <h3>Étape 5 : Testez et itérez</h3>
+                <p>Lancez votre MVP auprès d'un petit groupe et recueillez leurs retours. Mesurez :</p>
+                <ul>
+                    <li>Le taux de conversion (combien s'inscrivent/achètent ?)</li>
+                    <li>Le taux de rétention (reviennent-ils ?)</li>
+                    <li>Les avis et commentaires</li>
+                    <li>Les demandes de fonctionnalités</li>
+                </ul>
             </article>
 
             <article class="article">
-                <h2>Les erreurs à éviter lors du lancement de votre startup</h2>
-                <div class="article-meta">Publié le 5 janvier 2024 | 6 min de lecture</div>
-                <p>De nombreux entrepreneurs font les mêmes erreurs. Apprenez de leurs expériences pour éviter les pièges courants : mauvaise gestion financière, recrutement précipité, absence de business plan, etc.</p>
+                <h2>Leçon 3 : Les erreurs à éviter lors du lancement de votre startup</h2>
+                <div class="article-meta">Publié le 5 janvier 2024 | 10 min de lecture</div>
+                
+                <h3>Erreur n°1 : Ne pas connaître son marché</h3>
+                <p>Beaucoup d'entrepreneurs se lancent sans avoir suffisamment étudié leur marché. Ils découvrent trop tard que leurs concurrents sont trop nombreux ou que la demande n'existe pas.</p>
+                <p><strong>Solution :</strong> Passez au moins 3 mois à étudier votre marché avant de lancer. Analysez vos concurrents, leurs forces et faiblesses, et identifiez votre avantage concurrentiel unique.</p>
+
+                <h3>Erreur n°2 : Mal gérer ses finances</h3>
+                <p>La mauvaise gestion financière est la première cause d'échec des startups. Cela inclut :</p>
+                <ul>
+                    <li>Sous-estimer les coûts de lancement</li>
+                    <li>Brûler son cash trop rapidement</li>
+                    <li>Ne pas prévoir de marge de sécurité</li>
+                    <li>Mélanger finances personnelles et professionnelles</li>
+                </ul>
+
+                <div class="highlight">
+                    <p><strong>Règle d'or :</strong> Prévoyez toujours 6 mois de dépenses en plus de ce que vous estimez nécessaire. Les imprévus sont la règle, pas l'exception.</p>
+                </div>
+
+                <h3>Erreur n°3 : Vouloir tout faire soi-même</h3>
+                <p>L'entrepreneur qui veut tout contrôler s'épuise et limite la croissance de son entreprise. Apprendre à déléguer est crucial.</p>
+                <p><strong>Solution :</strong> Identifiez vos forces et concentrez-vous sur ce que vous faites le mieux. Pour le reste, externalisez ou embauchez des experts.</p>
+
+                <h3>Erreur n°4 : Ignorer le marketing</h3>
+                <p>Même le meilleur produit ne se vend pas tout seul. Beaucoup de startups se concentrent exclusivement sur le développement produit et négligent la stratégie de lancement.</p>
+                <p><strong>Solution :</strong> Commencez votre marketing au moins 3 mois avant le lancement. Créez une liste d'attente, développez votre présence sur les réseaux sociaux, créez du contenu de valeur.</p>
+
+                <h3>Erreur n°5 : Recruter trop vite ou mal</h3>
+                <p>Les mauvaises embauches coûtent cher et peuvent détruire la culture d'entreprise. À l'inverse, attendre trop longtemps peut freiner votre croissance.</p>
+                <p><strong>Solution :</strong> Définissez clairement vos besoins avant de recruter. Prenez le temps de trouver la bonne personne, même si cela retarde le recrutement.</p>
             </article>
         </div>
     </main>
