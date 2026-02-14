@@ -11,6 +11,10 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -24,6 +28,7 @@
             padding: 0 20px;
         }
 
+        /* Header */
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -38,6 +43,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
         }
 
         .logo {
@@ -45,6 +51,23 @@
             font-weight: bold;
             color: white;
             text-decoration: none;
+        }
+
+        /* Menu hamburger */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 3px;
         }
 
         .nav-links {
@@ -67,6 +90,7 @@
             opacity: 0.8;
         }
 
+        /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1499209974431-9dddcece7f88?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
@@ -90,6 +114,13 @@
             font-size: 1.2rem;
             max-width: 600px;
             margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 0;
+            scroll-margin-top: 80px;
         }
 
         .section-title {
@@ -99,11 +130,31 @@
             color: #333;
         }
 
+        .section-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), var(--bg-image);
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+        }
+
+        .section-hero h2 {
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Cartes d'accueil */
         .cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
 
         .card {
@@ -138,6 +189,54 @@
             color: #666;
         }
 
+        /* Articles de leçons */
+        .article {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .article h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .article h4 {
+            color: #764ba2;
+            margin: 1.5rem 0 1rem 0;
+            font-size: 1.3rem;
+        }
+
+        .article-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .article p {
+            margin-bottom: 1rem;
+        }
+
+        .article ul, .article ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        .article li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            background: #f0f4ff;
+            padding: 1.5rem;
+            border-left: 4px solid #667eea;
+            margin: 1.5rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+
         .btn {
             display: inline-block;
             background: #667eea;
@@ -152,6 +251,22 @@
             background: #764ba2;
         }
 
+        .btn-top {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 1rem 0;
+            transition: background 0.3s;
+        }
+
+        .btn-top:hover {
+            background: #764ba2;
+        }
+
+        /* Footer */
         footer {
             background: #333;
             color: white;
@@ -160,18 +275,68 @@
             margin-top: 3rem;
         }
 
+        /* Media Queries pour mobile */
         @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
             .nav-links {
+                display: none;
                 flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                padding: 1rem 0;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                border-radius: 0 0 10px 10px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 0.5rem 2rem;
                 text-align: center;
             }
+
+            .nav-links a {
+                display: block;
+                padding: 0.5rem;
+                font-size: 1.1rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section-hero h2 {
+                font-size: 2rem;
+            }
             
-            .nav-links li {
-                margin: 0.5rem 0;
+            .hero {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                height: 350px;
             }
             
             .hero-content h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+            }
+
+            .section {
+                padding: 2rem 0;
             }
         }
     </style>
@@ -180,60 +345,287 @@
     <header>
         <div class="container">
             <nav>
-                <a href="index.html" class="logo">Évolution Perso</a>
-                <ul class="nav-links">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="entreprenariat.html">Entreprenariat</a></li>
-                    <li><a href="education.html">Éducation Financière</a></li>
-                    <li><a href="leader.html">Leadership</a></li>
+                <a href="#accueil" class="logo">Évolution Perso</a>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#entreprenariat">Entreprenariat</a></li>
+                    <li><a href="#education">Éducation Financière</a></li>
+                    <li><a href="#leadership">Leadership</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Développez votre potentiel</h1>
-            <p>Découvrez des conseils et ressources pour votre développement personnel, professionnel et financier</p>
+    <!-- SECTION ACCUEIL -->
+    <section id="accueil" class="section">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Développez votre potentiel</h1>
+                <p>Découvrez des conseils et ressources pour votre développement personnel, professionnel et financier</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2 class="section-title">Nos thématiques</h2>
+            
+            <div class="cards">
+                <div class="card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="card-content">
+                        <h3>Entreprenariat</h3>
+                        <p>Découvrez les clés pour lancer et développer votre entreprise. Conseils pratiques, études de cas et stratégies gagnantes.</p>
+                        <a href="#entreprenariat" class="btn">Voir les leçons</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="card-content">
+                        <h3>Éducation Financière</h3>
+                        <p>Apprenez à gérer vos finances, investir intelligemment et construire votre liberté financière.</p>
+                        <a href="#education" class="btn">Voir les leçons</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="card-content">
+                        <h3>Leadership</h3>
+                        <p>Développez votre potentiel de leader, apprenez à inspirer et à guider vos équipes vers la réussite.</p>
+                        <a href="#leadership" class="btn">Voir les leçons</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <main class="container">
-        <h2 class="section-title">Nos thématiques</h2>
-        
-        <div class="cards">
-            <div class="card">
-                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="card-content">
-                    <h3>Entreprenariat</h3>
-                    <p>Découvrez les clés pour lancer et développer votre entreprise. Conseils pratiques, études de cas et stratégies gagnantes.</p>
-                    <a href="entreprenariat.html" class="btn">Lire plus</a>
-                </div>
+    <!-- SECTION ENTREPRENARIAT -->
+    <section id="entreprenariat" class="section">
+        <div class="container">
+            <div class="section-hero" style="--bg-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                <h2>Entreprenariat</h2>
             </div>
 
-            <div class="card">
-                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="card-content">
-                    <h3>Éducation Financière</h3>
-                    <p>Apprenez à gérer vos finances, investir intelligemment et construire votre liberté financière.</p>
-                    <a href="education.html" class="btn">Lire plus</a>
+            <a href="#accueil" class="btn-top">← Retour à l'accueil</a>
+
+            <div class="article">
+                <h3>Leçon 1 : Les 5 qualités essentielles d'un entrepreneur à succès</h3>
+                <div class="article-meta">15 min de lecture</div>
+                
+                <h4>1. La résilience : le pilier fondamental</h4>
+                <p>La résilience est la capacité à rebondir après un échec. Dans le monde de l'entrepreneuriat, les obstacles sont nombreux et fréquents. Les entrepreneurs qui réussissent sont ceux qui considèrent l'échec comme une opportunité d'apprentissage plutôt qu'une fin en soi.</p>
+                <p><strong>Comment développer sa résilience ?</strong></p>
+                <ul>
+                    <li>Adoptez une mentalité de croissance : chaque difficulté est une leçon</li>
+                    <li>Entourez-vous de personnes positives qui vous soutiennent</li>
+                    <li>Prenez du recul face aux situations difficiles</li>
+                    <li>Célébrez les petites victoires pour maintenir votre motivation</li>
+                </ul>
+
+                <h4>2. La vision : voir au-delà du présent</h4>
+                <p>Un entrepreneur doit avoir une vision claire de où il veut aller. Cette vision guide toutes ses décisions et inspire son équipe.</p>
+                <div class="highlight">
+                    <p><strong>Exercice pratique :</strong> Prenez 30 minutes pour écrire où vous voyez votre entreprise dans 5 ans. Soyez précis : chiffre d'affaires, nombre d'employés, impact sur vos clients, etc.</p>
                 </div>
+
+                <h4>3. L'adaptabilité : savoir pivoter</h4>
+                <p>Le marché change constamment. Les entrepreneurs qui réussissent savent s'adapter et modifier leur stratégie quand nécessaire. L'histoire de Slack qui a commencé comme un jeu vidéo avant de devenir l'outil de communication qu'on connaît est un parfait exemple.</p>
+
+                <h4>4. La passion : le moteur de la persévérance</h4>
+                <p>Sans passion, il est difficile de traverser les moments difficiles. Votre projet doit vous animer profondément pour que vous soyez prêt à y consacrer le temps et l'énergie nécessaires.</p>
+
+                <h4>5. La discipline : la clé de l'exécution</h4>
+                <p>Les idées ne valent rien sans exécution. La discipline vous permet de transformer vos visions en réalité, jour après jour.</p>
+                <ul>
+                    <li>Établissez des routines quotidiennes</li>
+                    <li>Fixez-vous des objectifs SMART (Spécifiques, Mesurables, Atteignables, Réalistes, Temporellement définis)</li>
+                    <li>Tenez un journal de bord de vos progrès</li>
+                </ul>
             </div>
 
-            <div class="card">
-                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="card-content">
-                    <h3>Leadership</h3>
-                    <p>Développez votre potentiel de leader, apprenez à inspirer et à guider vos équipes vers la réussite.</p>
-                    <a href="leader.html" class="btn">Lire plus</a>
+            <div class="article">
+                <h3>Leçon 2 : Comment valider votre idée d'entreprise avant de vous lancer</h3>
+                <div class="article-meta">12 min de lecture</div>
+                
+                <h4>Pourquoi la validation est cruciale ?</h4>
+                <p>80% des nouvelles entreprises échouent dans les 18 premiers mois, souvent parce qu'elles créent un produit dont personne n'a besoin. La validation de marché vous évite de perdre du temps et de l'argent sur une idée non viable.</p>
+
+                <h4>Étape 1 : Définissez votre proposition de valeur</h4>
+                <p>Avant de valider, vous devez savoir ce que vous validez. Utilisez le "Value Proposition Canvas" pour clarifier :</p>
+                <ul>
+                    <li>Quel problème résolvez-vous ?</li>
+                    <li>Pour qui ?</li>
+                    <li>Quelle est votre solution unique ?</li>
+                    <li>Quels sont les bénéfices pour vos clients ?</li>
+                </ul>
+
+                <h4>Étape 2 : Identifiez vos clients potentiels</h4>
+                <p>Créez un profil détaillé de votre client idéal :</p>
+                <ul>
+                    <li>Âge, profession, localisation</li>
+                    <li>Habitudes de consommation</li>
+                    <li>Points de douleur actuels</li>
+                    <li>Où trouvent-ils leurs informations ?</li>
+                </ul>
+
+                <div class="highlight">
+                    <p><strong>Exemple de questions :</strong> "Comment résolvez-vous ce problème actuellement ?", "Qu'est-ce qui vous frustre dans les solutions existantes ?", "Si vous aviez une baguette magique, que changeriez-vous ?"</p>
+                </div>
+
+                <h4>Étape 3 : Créez un MVP (Minimum Viable Product)</h4>
+                <p>Le MVP est la version la plus simple de votre produit qui apporte de la valeur. Il peut s'agir :</p>
+                <ul>
+                    <li>D'une landing page avec un formulaire d'inscription</li>
+                    <li>D'une maquette interactive</li>
+                    <li>D'un service rendu manuellement (le "Wizard of Oz")</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION ÉDUCATION FINANCIÈRE -->
+    <section id="education" class="section">
+        <div class="container">
+            <div class="section-hero" style="--bg-image: url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                <h2>Éducation Financière</h2>
+            </div>
+
+            <a href="#accueil" class="btn-top">← Retour à l'accueil</a>
+
+            <div class="article">
+                <h3>Leçon 1 : Les bases de la gestion budgétaire</h3>
+                <div class="article-meta">12 min de lecture</div>
+                
+                <h4>Pourquoi un budget est essentiel ?</h4>
+                <p>Un budget n'est pas une contrainte, c'est un outil de liberté. Il vous permet de :</p>
+                <ul>
+                    <li>Savoir exactement où va votre argent</li>
+                    <li>Identifier les dépenses superflues</li>
+                    <li>Atteindre vos objectifs d'épargne</li>
+                    <li>Préparer les imprévus</li>
+                </ul>
+
+                <h4>Étape 1 : Calculez vos revenus nets</h4>
+                <p>Commencez par lister tous vos revenus mensuels après impôts :</p>
+                <ul>
+                    <li>Salaire principal</li>
+                    <li>Revenus secondaires (freelance, locations, etc.)</li>
+                    <li>Pensions, allocations</li>
+                </ul>
+
+                <h4>Étape 2 : Suivez vos dépenses pendant un mois</h4>
+                <p>Pendant 30 jours, notez TOUTES vos dépenses, même les plus petites. Utilisez :</p>
+                <ul>
+                    <li>Une application comme Bankin', Linxo ou YNAB</li>
+                    <li>Un tableur Excel/Google Sheets</li>
+                    <li>Un carnet et un stylo</li>
+                </ul>
+
+                <div class="highlight">
+                    <p><strong>Astuce :</strong> Classez vos dépenses en catégories : logement, alimentation, transport, loisirs, abonnements, etc. Vous serez surpris de voir où part vraiment votre argent.</p>
+                </div>
+
+                <h4>Étape 3 : Appliquez la règle 50/30/20</h4>
+                <ul>
+                    <li><strong>50% pour les besoins essentiels :</strong> loyer, factures, alimentation de base, transports</li>
+                    <li><strong>30% pour les envies :</strong> restaurants, loisirs, vacances, shopping</li>
+                    <li><strong>20% pour l'épargne et les investissements :</strong> épargne de précaution, placements, remboursement de dettes</li>
+                </ul>
+            </div>
+
+            <div class="article">
+                <h3>Leçon 2 : Investir en bourse pour les débutants</h3>
+                <div class="article-meta">15 min de lecture</div>
+                
+                <h4>Les différents types de placements</h4>
+                
+                <h4>Les actions</h4>
+                <p>Vous achetez une part d'une entreprise. Vous pouvez gagner de l'argent de deux façons :</p>
+                <ul>
+                    <li><strong>La plus-value :</strong> si le cours de l'action monte, vous revendez plus cher</li>
+                    <li><strong>Les dividendes :</strong> une partie des bénéfices distribuée aux actionnaires</li>
+                </ul>
+
+                <h4>Les ETF (Trackers)</h4>
+                <p>Les ETF sont des paniers d'actions ou d'obligations qui répliquent la performance d'un indice (CAC 40, S&P 500). Idéal pour les débutants car ils offrent :</p>
+                <ul>
+                    <li>Une diversification instantanée</li>
+                    <li>Des frais très faibles</li>
+                    <li>Une gestion simplifiée</li>
+                </ul>
+
+                <div class="highlight">
+                    <p><strong>Recommandation débutant :</strong> Commencez par un ETF Monde (comme le MSCI World) qui vous donne accès à plus de 1500 grandes entreprises mondiales en un seul achat.</p>
                 </div>
             </div>
         </div>
+    </section>
 
-        <section id="contact" style="margin: 4rem 0;">
+    <!-- SECTION LEADERSHIP -->
+    <section id="leadership" class="section">
+        <div class="container">
+            <div class="section-hero" style="--bg-image: url('https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                <h2>Leadership</h2>
+            </div>
+
+            <a href="#accueil" class="btn-top">← Retour à l'accueil</a>
+
+            <div class="article">
+                <h3>Leçon 1 : Les 7 piliers du leadership authentique</h3>
+                <div class="article-meta">15 min de lecture</div>
+                
+                <h4>Pilier 1 : L'intégrité - La base de toute relation de confiance</h4>
+                <p>L'intégrité est la qualité fondamentale d'un leader. Elle se manifeste par la cohérence entre vos paroles et vos actes. Un leader intègre tient ses promesses, admet ses erreurs et agit selon des principes éthiques, même quand personne ne regarde.</p>
+                
+                <h4>Pilier 2 : La vision - Donner du sens à l'action</h4>
+                <p>Un leader doit savoir où il va et être capable de partager cette direction avec son équipe. La vision répond à la question "Pourquoi faisons-nous ce que nous faisons ?".</p>
+                
+                <div class="highlight">
+                    <p><strong>Exercice :</strong> Écrivez votre vision en une phrase qui soit à la fois inspirante et claire. Par exemple : "Devenir la référence du conseil en développement personnel en Afrique francophone d'ici 2028".</p>
+                </div>
+
+                <h4>Pilier 3 : L'empathie - Comprendre pour mieux guider</h4>
+                <p>L'empathie n'est pas de la faiblesse. C'est la capacité à comprendre les émotions et les perspectives des autres.</p>
+            </div>
+
+            <div class="article">
+                <h3>Leçon 2 : Comment développer son intelligence émotionnelle</h3>
+                <div class="article-meta">12 min de lecture</div>
+                
+                <h4>Les 4 composantes de l'intelligence émotionnelle</h4>
+
+                <h4>1. La conscience de soi</h4>
+                <p>C'est la capacité à reconnaître ses émotions et leur impact sur vos pensées et actions.</p>
+                <p><strong>Comment la développer :</strong></p>
+                <ul>
+                    <li>Prenez 5 minutes chaque jour pour identifier ce que vous ressentez et pourquoi</li>
+                    <li>Tenez un journal émotionnel</li>
+                    <li>Observez vos réactions dans différentes situations</li>
+                </ul>
+
+                <h4>2. La maîtrise de soi</h4>
+                <p>C'est la capacité à gérer ses émotions, surtout dans les moments difficiles.</p>
+                <p><strong>Techniques pratiques :</strong></p>
+                <ul>
+                    <li>La respiration profonde quand vous sentez la colère monter</li>
+                    <li>Compter jusqu'à 10 avant de répondre</li>
+                    <li>Prendre du recul ("Est-ce que cela aura encore de l'importance dans 1 an ?")</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION CONTACT -->
+    <section id="contact" class="section">
+        <div class="container">
             <h2 class="section-title">Contactez-nous</h2>
-            <form style="max-width: 600px; margin: 0 auto;">
+            <form style="max-width: 600px; margin: 0 auto;" onsubmit="event.preventDefault(); alert('Message envoyé !');">
                 <div style="margin-bottom: 1rem;">
                     <label for="nom" style="display: block; margin-bottom: 0.5rem;">Nom</label>
                     <input type="text" id="nom" name="nom" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 5px;" required>
@@ -248,13 +640,55 @@
                 </div>
                 <button type="submit" class="btn" style="border: none; cursor: pointer;">Envoyer</button>
             </form>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
             <p>&copy; 2024 Évolution Perso - Tous droits réservés</p>
         </div>
     </footer>
+
+    <script>
+        // Script pour le menu mobile
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            
+            // Animation du bouton hamburger
+            const spans = mobileMenu.querySelectorAll('span');
+            spans[0].style.transform = navLinks.classList.contains('active') ? 'rotate(45deg) translate(5px, 5px)' : '';
+            spans[1].style.opacity = navLinks.classList.contains('active') ? '0' : '1';
+            spans[2].style.transform = navLinks.classList.contains('active') ? 'rotate(-45deg) translate(7px, -7px)' : '';
+        });
+
+        // Fermer le menu quand on clique sur un lien
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                // Remettre le hamburger en position normale
+                const spans = mobileMenu.querySelectorAll('span');
+                spans[0].style.transform = '';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = '';
+            });
+        });
+
+        // Smooth scroll pour les ancres
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
