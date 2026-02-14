@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entreprenariat - Évolution Perso</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .page-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .content {
+            margin: 3rem 0;
+        }
+
+        .article {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .article h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .article-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-back {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 2rem 0;
+            transition: background 0.3s;
+        }
+
+        .btn-back:hover {
+            background: #764ba2;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Évolution Perso</a>
+                <ul class="nav-links">
+                    <li><a href="index.html" target="_blank">Accueil</a></li>
+                    <li><a href="entreprenariat.html">Entreprenariat</a></li>
+                    <li><a href="education.html" target="_blank">Éducation Financière</a></li>
+                    <li><a href="index.html#contact" target="_blank">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div>
+            <h1>Entreprenariat</h1>
+            <p>Les clés pour réussir votre aventure entrepreneuriale</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <a href="index.html" target="_blank" class="btn-back">← Retour à l'accueil</a>
+
+        <div class="content">
+            <article class="article">
+                <h2>Les 5 qualités essentielles d'un entrepreneur à succès</h2>
+                <div class="article-meta">Publié le 15 janvier 2024 | 5 min de lecture</div>
+                <p>Découvrez les qualités qui distinguent les entrepreneurs qui réussissent : la résilience, la vision, l'adaptabilité, la passion et la discipline. Apprenez à développer ces compétences clés pour votre parcours entrepreneurial.</p>
+            </article>
+
+            <article class="article">
+                <h2>Comment valider votre idée d'entreprise avant de vous lancer</h2>
+                <div class="article-meta">Publié le 10 janvier 2024 | 7 min de lecture</div>
+                <p>Évitez les erreurs courantes en apprenant à tester votre idée sur le marché. Méthodes pratiques, études de marché et retours d'expérience pour valider votre concept avant d'investir.</p>
+            </article>
+
+            <article class="article">
+                <h2>Les erreurs à éviter lors du lancement de votre startup</h2>
+                <div class="article-meta">Publié le 5 janvier 2024 | 6 min de lecture</div>
+                <p>De nombreux entrepreneurs font les mêmes erreurs. Apprenez de leurs expériences pour éviter les pièges courants : mauvaise gestion financière, recrutement précipité, absence de business plan, etc.</p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Évolution Perso - Tous droits réservés</p>
+        </div>
+    </footer>
+</body>
+</html>
