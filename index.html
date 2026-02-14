@@ -24,12 +24,14 @@
             padding: 0 20px;
         }
 
-        /* Header */
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 1rem 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         nav {
@@ -65,7 +67,6 @@
             opacity: 0.8;
         }
 
-        /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1499209974431-9dddcece7f88?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
@@ -91,7 +92,6 @@
             margin: 0 auto;
         }
 
-        /* Cards */
         .section-title {
             text-align: center;
             font-size: 2.5rem;
@@ -101,7 +101,7 @@
 
         .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-bottom: 3rem;
         }
@@ -152,7 +152,6 @@
             background: #764ba2;
         }
 
-        /* Footer */
         footer {
             background: #333;
             color: white;
@@ -184,9 +183,9 @@
                 <a href="index.html" class="logo">Évolution Perso</a>
                 <ul class="nav-links">
                     <li><a href="index.html">Accueil</a></li>
-                    <li><a href="entreprenariat.html" target="_blank">Entreprenariat</a></li>
-                    <li><a href="education.html" target="_blank">Éducation Financière</a></li>
-                    <li><a href="leader.html" target="_blank">Leadership</a></li>
+                    <li><a href="entreprenariat.html">Entreprenariat</a></li>
+                    <li><a href="education.html">Éducation Financière</a></li>
+                    <li><a href="leader.html">Leadership</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -209,7 +208,7 @@
                 <div class="card-content">
                     <h3>Entreprenariat</h3>
                     <p>Découvrez les clés pour lancer et développer votre entreprise. Conseils pratiques, études de cas et stratégies gagnantes.</p>
-                    <a href="entreprenariat.html" target="_blank" class="btn">Lire plus</a>
+                    <a href="entreprenariat.html" class="btn">Lire plus</a>
                 </div>
             </div>
 
@@ -218,7 +217,7 @@
                 <div class="card-content">
                     <h3>Éducation Financière</h3>
                     <p>Apprenez à gérer vos finances, investir intelligemment et construire votre liberté financière.</p>
-                    <a href="education.html" target="_blank" class="btn">Lire plus</a>
+                    <a href="education.html" class="btn">Lire plus</a>
                 </div>
             </div>
 
@@ -227,7 +226,7 @@
                 <div class="card-content">
                     <h3>Leadership</h3>
                     <p>Développez votre potentiel de leader, apprenez à inspirer et à guider vos équipes vers la réussite.</p>
-                    <a href="leader.html" target="_blank" class="btn">Lire plus</a>
+                    <a href="leader.html" class="btn">Lire plus</a>
                 </div>
             </div>
         </div>
@@ -237,15 +236,15 @@
             <form style="max-width: 600px; margin: 0 auto;">
                 <div style="margin-bottom: 1rem;">
                     <label for="nom" style="display: block; margin-bottom: 0.5rem;">Nom</label>
-                    <input type="text" id="nom" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 5px;">
+                    <input type="text" id="nom" name="nom" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 5px;" required>
                 </div>
                 <div style="margin-bottom: 1rem;">
                     <label for="email" style="display: block; margin-bottom: 0.5rem;">Email</label>
-                    <input type="email" id="email" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 5px;">
+                    <input type="email" id="email" name="email" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 5px;" required>
                 </div>
                 <div style="margin-bottom: 1rem;">
                     <label for="message" style="display: block; margin-bottom: 0.5rem;">Message</label>
-                    <textarea id="message" rows="5" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 5px;"></textarea>
+                    <textarea id="message" name="message" rows="5" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 5px;" required></textarea>
                 </div>
                 <button type="submit" class="btn" style="border: none; cursor: pointer;">Envoyer</button>
             </form>
