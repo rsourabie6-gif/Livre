@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éducation Financière - Évolution Perso</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .page-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .content {
+            margin: 3rem 0;
+        }
+
+        .article {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .article h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .article-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-back {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 2rem 0;
+            transition: background 0.3s;
+        }
+
+        .btn-back:hover {
+            background: #764ba2;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Évolution Perso</a>
+                <ul class="nav-links">
+                    <li><a href="index.html" target="_blank">Accueil</a></li>
+                    <li><a href="entreprenariat.html" target="_blank">Entreprenariat</a></li>
+                    <li><a href="education.html">Éducation Financière</a></li>
+                    <li><a href="index.html#contact" target="_blank">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div>
+            <h1>Éducation Financière</h1>
+            <p>Les principes pour bâtir votre liberté financière</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <a href="index.html" target="_blank" class="btn-back">← Retour à l'accueil</a>
+
+        <div class="content">
+            <article class="article">
+                <h2>Les bases de la gestion budgétaire</h2>
+                <div class="article-meta">Publié le 14 janvier 2024 | 6 min de lecture</div>
+                <p>Apprenez à établir un budget efficace, suivre vos dépenses et optimiser votre épargne. Des méthodes simples pour reprendre le contrôle de vos finances personnelles.</p>
+            </article>
+
+            <article class="article">
+                <h2>Investir en bourse pour les débutants</h2>
+                <div class="article-meta">Publié le 8 janvier 2024 | 8 min de lecture</div>
+                <p>Découvrez les fondamentaux de l'investissement en bourse : actions, obligations, ETF. Comprenez les risques et les opportunités pour commencer à investir sereinement.</p>
+            </article>
+
+            <article class="article">
+                <h2>Construire un patrimoine immobilier</h2>
+                <div class="article-meta">Publié le 3 janvier 2024 | 7 min de lecture</div>
+                <p>Les stratégies pour investir dans l'immobilier : location classique, LMNP, SCPI. Comment financer vos achats et optimiser votre rentabilité.</p>
+            </article>
+
+            <article class="article">
+                <h2>Préparer sa retraite dès maintenant</h2>
+                <div class="article-meta">Publié le 28 décembre 2023 | 5 min de lecture</div>
+                <p>Les différents dispositifs d'épargne retraite et comment les utiliser efficacement selon votre âge et vos objectifs. Ne remettez pas à demain votre sécurité financière.</p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Évolution Perso - Tous droits réservés</p>
+        </div>
+    </footer>
+</body>
+</html>
