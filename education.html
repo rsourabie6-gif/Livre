@@ -29,6 +29,9 @@
             color: white;
             padding: 1rem 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         nav {
@@ -98,12 +101,32 @@
         .article h2 {
             color: #667eea;
             margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .article h3 {
+            color: #764ba2;
+            margin: 1.5rem 0 1rem 0;
+            font-size: 1.3rem;
         }
 
         .article-meta {
             color: #666;
             font-size: 0.9rem;
             margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .article p {
+            margin-bottom: 1rem;
+        }
+
+        .article ul, .article ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        .article li {
+            margin-bottom: 0.5rem;
         }
 
         .btn-back {
@@ -121,6 +144,14 @@
             background: #764ba2;
         }
 
+        .highlight {
+            background: #f0f4ff;
+            padding: 1.5rem;
+            border-left: 4px solid #667eea;
+            margin: 1.5rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+
         footer {
             background: #333;
             color: white;
@@ -136,10 +167,11 @@
             <nav>
                 <a href="index.html" class="logo">Évolution Perso</a>
                 <ul class="nav-links">
-                    <li><a href="index.html" target="_blank">Accueil</a></li>
-                    <li><a href="entreprenariat.html" target="_blank">Entreprenariat</a></li>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="entreprenariat.html">Entreprenariat</a></li>
                     <li><a href="education.html">Éducation Financière</a></li>
-                    <li><a href="index.html#contact" target="_blank">Contact</a></li>
+                    <li><a href="leader.html">Leadership</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -153,31 +185,203 @@
     </section>
 
     <main class="container">
-        <a href="index.html" target="_blank" class="btn-back">← Retour à l'accueil</a>
+        <a href="index.html" class="btn-back">← Retour à l'accueil</a>
 
         <div class="content">
             <article class="article">
-                <h2>Les bases de la gestion budgétaire</h2>
-                <div class="article-meta">Publié le 14 janvier 2024 | 6 min de lecture</div>
-                <p>Apprenez à établir un budget efficace, suivre vos dépenses et optimiser votre épargne. Des méthodes simples pour reprendre le contrôle de vos finances personnelles.</p>
+                <h2>Leçon 1 : Les bases de la gestion budgétaire</h2>
+                <div class="article-meta">Publié le 14 janvier 2024 | 12 min de lecture</div>
+                
+                <h3>Pourquoi un budget est essentiel ?</h3>
+                <p>Un budget n'est pas une contrainte, c'est un outil de liberté. Il vous permet de :</p>
+                <ul>
+                    <li>Savoir exactement où va votre argent</li>
+                    <li>Identifier les dépenses superflues</li>
+                    <li>Atteindre vos objectifs d'épargne</li>
+                    <li>Préparer les imprévus</li>
+                    <li>Réduire le stress financier</li>
+                </ul>
+
+                <h3>Étape 1 : Calculez vos revenus nets</h3>
+                <p>Commencez par lister tous vos revenus mensuels après impôts :</p>
+                <ul>
+                    <li>Salaire principal</li>
+                    <li>Revenus secondaires (freelance, locations, etc.)</li>
+                    <li>Pensions, allocations</li>
+                    <li>Revenus de placements</li>
+                </ul>
+
+                <h3>Étape 2 : Suivez vos dépenses pendant un mois</h3>
+                <p>Pendant 30 jours, notez TOUTES vos dépenses, même les plus petites. Utilisez :</p>
+                <ul>
+                    <li>Une application comme Bankin', Linxo ou YNAB</li>
+                    <li>Un tableur Excel/Google Sheets</li>
+                    <li>Un carnet et un stylo</li>
+                </ul>
+
+                <div class="highlight">
+                    <p><strong>Astuce :</strong> Classez vos dépenses en catégories : logement, alimentation, transport, loisirs, abonnements, etc. Vous serez surpris de voir où part vraiment votre argent.</p>
+                </div>
+
+                <h3>Étape 3 : Appliquez la règle 50/30/20</h3>
+                <p>Cette règle simple vous aide à répartir vos revenus de façon équilibrée :</p>
+                <ul>
+                    <li><strong>50% pour les besoins essentiels :</strong> loyer, factures, alimentation de base, transports</li>
+                    <li><strong>30% pour les envies :</strong> restaurants, loisirs, vacances, shopping</li>
+                    <li><strong>20% pour l'épargne et les investissements :</strong> épargne de précaution, placements, remboursement de dettes</li>
+                </ul>
+
+                <h3>Étape 4 : Identifiez et réduisez les dépenses inutiles</h3>
+                <p>Passez en revue vos dépenses du mois et posez-vous ces questions :</p>
+                <ul>
+                    <li>Quels abonnements n'utilisez-vous pas vraiment ?</li>
+                    <li>Combien dépensez-vous en cafés/restaurants ?</li>
+                    <li>Pouvez-vous trouver des alternatives moins chères ?</li>
+                    <li>Certaines dépenses sont-elles impulsives ?</li>
+                </ul>
+
+                <h3>Étape 5 : Automatisez votre épargne</h3>
+                <p>Le meilleur moyen d'épargner est de ne pas avoir à y penser :</p>
+                <ul>
+                    <li>Mettez en place un virement automatique vers votre compte épargne le jour de paie</li>
+                    <li>Commencez petit (5-10% de vos revenus) et augmentez progressivement</li>
+                    <li>Considérez cette épargne comme une dépense obligatoire</li>
+                </ul>
             </article>
 
             <article class="article">
-                <h2>Investir en bourse pour les débutants</h2>
-                <div class="article-meta">Publié le 8 janvier 2024 | 8 min de lecture</div>
-                <p>Découvrez les fondamentaux de l'investissement en bourse : actions, obligations, ETF. Comprenez les risques et les opportunités pour commencer à investir sereinement.</p>
+                <h2>Leçon 2 : Investir en bourse pour les débutants</h2>
+                <div class="article-meta">Publié le 8 janvier 2024 | 15 min de lecture</div>
+                
+                <h3>Les fondamentaux de la bourse</h3>
+                <p>La bourse est un marché où s'échangent des actions (parts d'entreprises) et des obligations (prêts à des entreprises ou États). Investir en bourse permet de :</p>
+                <ul>
+                    <li>Faire fructifier son épargne sur le long terme</li>
+                    <li>Percevoir des dividendes (revenus réguliers)</li>
+                    <li>Se protéger contre l'inflation</li>
+                    <li>Devenir actionnaire d'entreprises que vous appréciez</li>
+                </ul>
+
+                <h3>Les différents types de placements</h3>
+                
+                <h4>Les actions</h4>
+                <p>Vous achetez une part d'une entreprise. Vous pouvez gagner de l'argent de deux façons :</p>
+                <ul>
+                    <li><strong>La plus-value :</strong> si le cours de l'action monte, vous revendez plus cher</li>
+                    <li><strong>Les dividendes :</strong> une partie des bénéfices distribuée aux actionnaires</li>
+                </ul>
+
+                <h4>Les obligations</h4>
+                <p>Vous prêtez de l'argent à une entreprise ou un État, qui vous verse des intérêts et vous rembourse à une date fixée. Moins risqué que les actions, mais rendement généralement plus faible.</p>
+
+                <h4>Les ETF (Trackers)</h4>
+                <p>Les ETF sont des paniers d'actions ou d'obligations qui répliquent la performance d'un indice (CAC 40, S&P 500). Idéal pour les débutants car ils offrent :</p>
+                <ul>
+                    <li>Une diversification instantanée</li>
+                    <li>Des frais très faibles</li>
+                    <li>Une gestion simplifiée</li>
+                </ul>
+
+                <div class="highlight">
+                    <p><strong>Recommandation débutant :</strong> Commencez par un ETF Monde (comme le MSCI World) qui vous donne accès à plus de 1500 grandes entreprises mondiales en un seul achat.</p>
+                </div>
+
+                <h3>Comment commencer à investir ?</h3>
+                
+                <h4>1. Choisissez un courtier</h4>
+                <p>En France, les principales options sont :</p>
+                <ul>
+                    <li>PEA (Plan d'Épargne en Actions) : avantage fiscal après 5 ans</li>
+                    <li>Compte-titres ordinaire : plus flexible mais moins d'avantages fiscaux</li>
+                    <li>Assurance-vie : pour une approche plus patrimoniale</li>
+                </ul>
+
+                <h4>2. Définissez votre stratégie</h4>
+                <p>Avant d'investir, posez-vous ces questions :</p>
+                <ul>
+                    <li>Quel est votre horizon de placement ? (5, 10, 20 ans ?)</li>
+                    <li>Quelle est votre tolérance au risque ?</li>
+                    <li>Quel montant pouvez-vous investir régulièrement ?</li>
+                </ul>
+
+                <h4>3. Commencez par des versements réguliers</h4>
+                <p>Le DCA (Dollar Cost Averaging) consiste à investir la même somme chaque mois, quel que soit le cours. Cela permet de :</p>
+                <ul>
+                    <li>Lisser le risque d'entrée sur le marché</li>
+                    <li>Développer une discipline d'investissement</li>
+                    <li>Profiter des baisses pour acheter moins cher</li>
+                </ul>
+
+                <h3>Les erreurs à éviter</h3>
+                <ul>
+                    <li><strong>Le market timing :</strong> personne ne peut prédire les mouvements du marché à court terme</li>
+                    <li><strong>Les frais trop élevés :</strong> ils grèvent vos rendements sur le long terme</li>
+                    <li><strong>Le manque de diversification :</strong> ne mettez pas tous vos œufs dans le même panier</li>
+                    <li><strong>Les décisions émotionnelles :</strong> ne vendez pas en panique lors des baisses</li>
+                </ul>
             </article>
 
             <article class="article">
-                <h2>Construire un patrimoine immobilier</h2>
-                <div class="article-meta">Publié le 3 janvier 2024 | 7 min de lecture</div>
-                <p>Les stratégies pour investir dans l'immobilier : location classique, LMNP, SCPI. Comment financer vos achats et optimiser votre rentabilité.</p>
-            </article>
+                <h2>Leçon 3 : Construire un patrimoine immobilier</h2>
+                <div class="article-meta">Publié le 3 janvier 2024 | 14 min de lecture</div>
+                
+                <h3>Pourquoi investir dans l'immobilier ?</h3>
+                <p>L'immobilier reste la pierre angulaire du patrimoine des Français pour plusieurs raisons :</p>
+                <ul>
+                    <li>C'est un actif tangible que vous pouvez voir et toucher</li>
+                    <li>Il génère des revenus complémentaires (loyers)</li>
+                    <li>Il se valorise généralement sur le long terme</li>
+                    <li>Effet de levier du crédit : vous empruntez pour acheter un bien qui prend de la valeur</li>
+                    <li>Avantages fiscaux selon le dispositif choisi</li>
+                </ul>
 
-            <article class="article">
-                <h2>Préparer sa retraite dès maintenant</h2>
-                <div class="article-meta">Publié le 28 décembre 2023 | 5 min de lecture</div>
-                <p>Les différents dispositifs d'épargne retraite et comment les utiliser efficacement selon votre âge et vos objectifs. Ne remettez pas à demain votre sécurité financière.</p>
+                <h3>Les différentes stratégies immobilières</h3>
+
+                <h4>1. La location classique (nu)</h4>
+                <p>Vous achetez un bien et le louez vide. C'est la forme la plus simple d'investissement locatif.</p>
+                <p><strong>Avantages :</strong> Simplicité, demande locative forte, pas de gestion du mobilier</p>
+                <p><strong>Inconvénients :</strong> Rendement souvent plus faible que le meublé, vacance locative possible</p>
+
+                <h4>2. La location meublée (LMNP)</h4>
+                <p>Vous louez un bien meublé. Le statut LMNP (Loueur Meublé Non Professionnel) offre des avantages fiscaux intéressants.</p>
+                <p><strong>Avantages :</strong> Rendement plus élevé, amortissement du bien possible (réduction d'impôts), demande locative en hausse</p>
+                <p><strong>Inconvénients :</strong> Gestion plus complexe (meubles à entretenir), turn-over plus important</p>
+
+                <div class="highlight">
+                    <p><strong>Focus LMNP :</strong> Le régime réel vous permet d'amortir le bien et les meubles, ce qui peut réduire vos impôts à zéro pendant plusieurs années tout en percevant des loyers.</p>
+                </div>
+
+                <h4>3. Les SCPI (Sociétés Civiles de Placement Immobilier)</h4>
+                <p>Vous achetez des parts dans une société qui possède et gère un parc immobilier diversifié (bureaux, commerces, résidences).</p>
+                <p><strong>Avantages :</strong> Pas de gestion, mutualisation des risques, revenus réguliers, accessible avec peu d'apport</p>
+                <p><strong>Inconvénients :</strong> Frais d'entrée élevés, liquidité moindre, pas de contrôle sur les biens</p>
+
+                <h3>Comment financer son investissement ?</h3>
+
+                <h4>Calculer sa capacité d'emprunt</h4>
+                <p>Les banques considèrent généralement que vos mensualités de crédit ne doivent pas dépasser 35% de vos revenus nets, assurance incluse.</p>
+
+                <h4>L'apport personnel</h4>
+                <p>Idéalement, prévoyez 10 à 20% du prix du bien pour :</p>
+                <ul>
+                    <li>Les frais de notaire (7-8% dans l'ancien)</li>
+                    <li>Les frais de dossier et garanties</li>
+                    <li>D'éventuels travaux</li>
+                </ul>
+
+                <h4>Calculer la rentabilité</h4>
+                <p><strong>Rentabilité brute :</strong> (Loyer annuel / Prix d'achat) x 100</p>
+                <p><strong>Rentabilité nette :</strong> (Loyer annuel - charges - taxes) / (Prix d'achat + frais) x 100</p>
+
+                <h3>Les étapes pour réussir son investissement</h3>
+                <ol>
+                    <li><strong>Définissez vos objectifs :</strong> revenus complémentaires, constitution de patrimoine, préparation retraite</li>
+                    <li><strong>Choisissez bien l'emplacement :</strong> le premier critère en immobilier est l'emplacement</li>
+                    <li><strong>Étudiez le marché local :</strong> demande locative, loyers pratiqués, évolution démographique</li>
+                    <li><strong>Calculez précisément la rentabilité :</strong> n'oubliez aucune charge</li>
+                    <li><strong>Négociez le prix :</strong> il y a toujours une marge de négociation</li>
+                    <li><strong>Faites appel à des professionnels :</strong> courtier, expert-comptable pour optimiser la fiscalité</li>
+                </ol>
             </article>
         </div>
     </main>
